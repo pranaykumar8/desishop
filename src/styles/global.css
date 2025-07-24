@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  padding: 6px 12px;
+  margin: 5px;
+}

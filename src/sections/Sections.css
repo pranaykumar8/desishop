@@ -1,0 +1,186 @@
+.section {
+  padding: 2rem 1rem;
+  background: #fff;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.card-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f8f8f8;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 150px;
+  text-align: center;
+}
+.steps {
+  list-style: none;
+  padding-left: 0;
+}
+.steps li {
+  margin-bottom: 0.8rem;
+}
+.section {
+  padding: 2rem 1rem;
+  background: #fff;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.steps {
+  list-style: none;
+  padding-left: 0;
+}
+
+.steps li {
+  margin-bottom: 0.8rem;
+}
+.section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  color: #2e7d32;
+}
+.section {
+  height: 100vh; /* Full screen height */
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center;
+}
+/* Base Section Style */
+.section {
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Section Specific Backgrounds */
+.section.services {
+  background-color: #7f9095;
+  
+}
+
+.section.offers {
+  background-color: #7f9095;
+}
+
+.section.how {
+  background-color: #7f9095;
+}
+
+.section.about {
+  background-color: #7f9095;
+  
+}
+
+/* Section Headings */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Cards */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  color: #2e7d32;
+}

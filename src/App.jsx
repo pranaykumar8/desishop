@@ -1,35 +1,128 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+// import { useState } from 'react';
+// import Header from './components/Header';
+// import ReactiveForm from './components/ReactiveForm';
+// import Navbar from './components/Sidebar';
+// import AboutUs from './sections/AboutUs';
+// import HowItWorks from './sections/HowItWorks';
+// import OurServices from './sections/OurServices';
+// import SpecialOffers from './sections/SpecialOffers';
+// import './styles/App.css';
+// // src/sections/OurServices.jsx
+// import './sections/Sections.css';
+
+
+// const App = () => {
+//   const [showNav, setShowNav] = useState(true);
+//   const [showForm, setShowForm] = useState(false);
+
+//   const scrollTo = (id) => {
+//     const el = document.getElementById(id);
+//     if (el) {
+//       el.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
+
+//   return (
+//     <div className="app">
+//       <Header scrollTo={scrollTo} />
+      
+//       {/* <button className="toggle-nav" onClick={() => setShowNav((prev) => !prev)}>
+//         ☰
+//       </button> */}
+
+//       {showNav && <Navbar scrollTo={scrollTo} />}
+
+//       <main>
+//         <section id="services">
+//           <OurServices onBookClick={() => setShowForm(true)} />
+//         </section>
+
+//         <section id="offers">
+//           <SpecialOffers />
+//         </section>
+
+//         <section id="how">
+//           <HowItWorks />
+//         </section>
+
+//         <section id="about">
+//           <AboutUs />
+//         </section>
+
+//         {showForm && <ReactiveForm onClose={() => setShowForm(false)} />}
+//       </main>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import Header from "./components/Header";
+import LoginForm from "./components/LoginForm";
+import ReactiveForm from "./components/ReactiveForm";
+import Sidebar from "./components/Sidebar";
+import SignupForm from "./components/SignupForm";
+
+import AboutUs from "./sections/AboutUs";
+import HowItWorks from "./sections/HowItWorks";
+import OurServices from "./sections/OurServices";
+import SpecialOffers from "./sections/SpecialOffers";
+
+import "./sections/Sections.css";
+import "./styles/App.css";
+
+const HomePage = () => {
+  const [showNav, setShowNav] = useState(true);
+  const [showForm, setShowForm] = useState(false);
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      <Header scrollTo={scrollTo} />
+      {showNav && <Sidebar scrollTo={scrollTo} />}
 
-export default App
+      <main>
+        <section id="services">
+          <OurServices onBookClick={() => setShowForm(true)} />
+        </section>
+
+        <section id="offers">
+          <SpecialOffers />
+        </section>
+
+        <section id="how">
+          <HowItWorks />
+        </section>
+
+        <section id="about">
+          <AboutUs />
+        </section>
+
+        {showForm && <ReactiveForm onClose={() => setShowForm(false)} />}
+      </main>
+    </div>
+  );
+};
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/signup" element={<SignupForm />} />
+        <Route path="/login" element={<LoginForm />} />
+      </Routes>
+    </Router>
+  );
+}
